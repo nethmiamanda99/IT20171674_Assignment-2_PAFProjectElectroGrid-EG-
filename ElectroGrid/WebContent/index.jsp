@@ -46,7 +46,7 @@
 							<option value="Trainee">Trainee</option>
 							</select>
 
-							<br><label> Password</label> <input id="password"
+							<br><label>Password</label> <input id="password"
 							name="password" type="text"
 							class="form-control form-control-sm">
 							
