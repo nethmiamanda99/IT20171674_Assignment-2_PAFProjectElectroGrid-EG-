@@ -51,16 +51,13 @@
 
 			<!-- Nav Item - Dashboard -->
 			<li class="nav-item"><a class="nav-link" href="home.jsp"> <span></span></a> <a class="nav-link"
-				href="index.jsp"> <i class="fas fa-home"></i> <span>Insert Employee</span></a>
+				href="index.jsp"> <i class="fas fa-home"></i> <span>Insert Employee Details</span></a>
 				</a> 
 				<a class="nav-link"
 				href="listemployees.jsp"> <i class="fas fa-home"></i> <span>List Employees</span></a>
 				<a class="nav-link"
 				href="login.jsp"> <i class="fas fa-home"></i> <span>Log Out</span></a>
 				
-
-
-
 
 			</li>
 
@@ -98,7 +95,6 @@
 						</div>
 					</div>
 				</form>
-
 				<!-- Topbar Navbar -->
 				<ul class="navbar-nav ml-auto">
 
@@ -136,15 +132,14 @@
 					<div class="topbar-divider d-none d-sm-block"></div>
 
 					<!-- Nav Item - User Information -->
+					
 					<li class="nav-item dropdown no-arrow"><a
 						class="nav-link dropdown-toggle" href="login.jsp" id="userDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false"> <span
 							class="mr-2 d-none d-lg-inline text-gray-600 small">
-							
-							</span>
-					</a> <!-- Dropdown - User Information -->
-						
+								</span>
+					</a>	
 			</li>
 
 			</ul>
@@ -167,82 +162,6 @@
 								<span aria-hidden="true" style="color: white">&times;</span>
 							</button>
 						</div>
-						<div class="modal-body">
-							<div class="card">
-
-								<div class="content">
-									<div class="container-fluid">
-										<form method="POST" action="AddItem">
-											<div class="row">
-												<div class="col-md-4">
-													<div class="form-group">
-														<i class="fas fa-list-alt text-primary mt-3 mb-2">
-															Item Name</i> <input type="text" class="form-control"
-															placeholder="Enter Item Name" name="itemName">
-													</div>
-												</div>
-												<div class="col-md-4">
-													<div class="form-group">
-														<i class="far fa-calendar-check text-primary mt-3 mb-2">
-															Warranty Day</i> <input type="date" class="form-control"
-															name="warrentyDay">
-													</div>
-												</div>
-												<div class="col-md-4">
-													<div class="form-group">
-														<i class="far fa-calendar-plus text-primary mt-3 mb-2">
-															Added Date</i> <input type="date" class="form-control"
-															name="addedDay">
-													</div>
-												</div>
-
-											</div>
-
-											<div class="row">
-												<div class="col-md-6">
-													<div class="form-group">
-														<i class="fas fa-user text-primary mt-3 mb-2"> Owner</i> <input
-															type="number" class="form-control"
-															placeholder="Employee ID" name="employeeId">
-													</div>
-												</div>
-												<div class="col-md-6">
-													<div class="form-group">
-														<i class="fas fa-map-marker-alt text-primary mt-3 mb-2">
-															Location</i> <input type="text" class="form-control"
-															placeholder="Storage" name="location">
-													</div>
-												</div>
-											</div>
-
-
-											<div class="row">
-												<div class="col-md-12">
-													<div class="form-group">
-														<i class="far fa-sticky-note text-primary mt-3 mb-2">
-															Item Description</i>
-														<textarea rows="3" class="form-control"
-															placeholder="Here can be your description"
-															name="description"></textarea>
-													</div>
-												</div>
-											</div>
-											<div class="row">
-												<div class="">
-													<button type="submit" class="btn btn-primary">
-														<i class="fas fa-plus-circle "></i> Add Item
-													</button>
-												</div>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-
-
-
-
 					</div>
 				</div>
 			</div>
