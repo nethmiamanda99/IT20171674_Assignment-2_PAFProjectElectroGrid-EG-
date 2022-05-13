@@ -8,10 +8,10 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Employee Details</title>
+
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery.min.js"></script>
 <script src="Components/employee.js"></script>
-<script src="Components/jquery.min.js"></script>
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 </head>
 <body>
@@ -36,9 +36,9 @@
 							<br><label>Email</label> <input id="email" name="email"
 							type="text" class="form-control form-control-sm"> 
 							
-							<br><label>User Role</label>
+							<br><label>Employee Role</label>
 							<select id="user_role" name="user_role" class="form-control form-control-sm">
-							<option value="admin">admin</option>
+							<option value="Admin">Admin</option>
 							<option value="Manager">Manager</option>
 							<option value="SeniorEngineer">Senior Engineer</option>
 							<option value="Engineer">Engineer</option>
@@ -62,8 +62,8 @@
 					
 					<div id="divUserGrid">
 						<%
-						Employee empObj = new Employee();
-											out.print(empObj.readEmployees());
+						      Employee empObj = new Employee();
+					          out.print(empObj.readEmployees());
 						%>
 					</div>
 				</div>
