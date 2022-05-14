@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
-<title>ElectroGrid</title>
+<title>ElectroGriddd</title>
 
 <!-- Custom fonts for this template-->
 <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet"
@@ -122,6 +122,7 @@
 						</div></li>
 
 					<!-- Nav Item - Alerts -->
+					
 					<li class="nav-item dropdown no-arrow mx-1"><a
 						class="nav-link dropdown-toggle" href="#" id="alertsDropdown"
 						role="button" data-toggle="dropdown" aria-haspopup="true"

@@ -1,5 +1,6 @@
 $(document).ready(function()
 {
+// Hide the alerts on page load------------------
 if ($("#alertSuccess").text().trim() == "")
  {
  $("#alertSuccess").hide();
@@ -10,17 +11,20 @@ if ($("#alertSuccess").text().trim() == "")
 
 
 
-//SAVE ============================================
+//SAVE=====================================================================================
 $(document).on("click", "#btnSave", function(event)
 {
-// Clear alerts---------------------
+
+// Clear alerts-----------------------------
  $("#alertSuccess").text("");
  $("#alertSuccess").hide();
  $("#alertError").text("");
  $("#alertError").hide();
  
-// Form validation---------------------------
+// Form validation-------------------------------------------
 var status = validateUserForm();
+
+// IF not valid----------------------------------------------
 if (status != true)
  {
  $("#alertError").text(status);
@@ -28,6 +32,7 @@ if (status != true)
  return;
  }
 
+// If valid--------------------------------------------------
 var type = ($("#hididSave").val() == "") ? "POST" : "PUT";
 
 
@@ -44,6 +49,9 @@ $.ajax(
 		});
 
 });
+
+
+// DC Response handler
 function onUserSaveComplete(response, status)
 {
 if (status == "success")
@@ -73,7 +81,8 @@ if (status == "success")
 		$("#formUser")[0].reset();
 }
 
-//UPDATE==========================================
+
+//UPDATE================================================================================
 $(document).on("click", ".btnUpdate", function(event)
 {
  $("#hididSave").val($(this).closest("tr").find('#hididUpdate').val());
@@ -84,7 +93,7 @@ $(document).on("click", ".btnUpdate", function(event)
  $("#password").val($(this).closest("tr").find('td:eq(4)').text());
 });
 
-
+//DELETE================================================================================
 $(document).on("click", ".btnRemove", function(event)
 		{
 		 $.ajax(
@@ -100,6 +109,8 @@ $(document).on("click", ".btnRemove", function(event)
 		 });
 		});
 
+
+// DC Response handler
 function onUserDeleteComplete(response, status)
 {
 if (status == "success")
@@ -126,21 +137,25 @@ if (status == "success")
  }
 }
 
+
+
 //CLIENTMODEL=========================================================================
+// Validating the form data===========================================================
+
 function validateUserForm()
 {
 	
 //first_name
 if ($("#first_name").val().trim() == "")
 {
-return "Insert first_name.";
+return "Insert employee first name.";
 }
 
 
 //last_name
 if ($("#last_name").val().trim() == "")
 {
-return "Insert last_name.";
+return "Insert employee last name.";
 }
 
 
@@ -162,13 +177,14 @@ else if(!isEmail($("#email").val())){
 
 
 
-//user_role
+// user_role
 if ($("#user_role").val().trim() == "")
 {
-return "Insert user_role.";
+return "Insert user role.";
 } 
 
-//password
+
+// password
 if ($("#password").val().trim() == "")
 {
 return "Insert password.";

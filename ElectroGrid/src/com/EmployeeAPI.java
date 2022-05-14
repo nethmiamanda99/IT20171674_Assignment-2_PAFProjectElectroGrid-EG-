@@ -29,6 +29,8 @@ public class EmployeeAPI extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	
+	// doGet -> Read
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -46,6 +48,8 @@ public class EmployeeAPI extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
 	 *      response)
 	 */
+	
+	// doPost -> Insert
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -57,7 +61,8 @@ public class EmployeeAPI extends HttpServlet {
 				request.getParameter("password"));
 		response.getWriter().write(output);
 	}
-
+    
+	// doPut -> Update
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
@@ -82,7 +87,8 @@ public class EmployeeAPI extends HttpServlet {
 		}
 		response.getWriter().write(output);
 	}
-
+    
+	// doDelete -> Delete
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
