@@ -55,8 +55,7 @@
 				</a> 
 				<a class="nav-link"
 				href="listemployees.jsp"> <i class="fas fa-home"></i> <span>List Employees</span></a>
-				<a class="nav-link"
-				href="login.jsp"> <i class="fas fa-home"></i> <span>Log Out</span></a>
+			
 				
 
 			</li>
