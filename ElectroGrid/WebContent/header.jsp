@@ -54,7 +54,7 @@
 				href="index.jsp"> <i class="fas fa-home"></i> <span>Insert Employee Details</span></a>
 				</a> 
 				<a class="nav-link"
-				href="listemployees.jsp"> <i class="fas fa-home"></i> <span>List Employees</span></a>
+				href="listemployees.jsp"> <i class="fas fa-home"></i> <span>List Of Employees</span></a>
 			
 				
 
