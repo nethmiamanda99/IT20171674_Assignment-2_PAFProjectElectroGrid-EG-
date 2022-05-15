@@ -1,4 +1,4 @@
-
+ 
 CREATE TABLE `employee` (
   `id` int(10) NOT NULL,
   `first_name` varchar(45) NOT NULL,
