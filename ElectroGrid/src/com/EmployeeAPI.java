@@ -31,6 +31,7 @@ public class EmployeeAPI extends HttpServlet {
 	 */
 	
 	// doGet -> Read
+	// Get all employee details
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
@@ -49,7 +50,8 @@ public class EmployeeAPI extends HttpServlet {
 	 *      response)
 	 */
 	
-	// doPost -> Insert
+	// doPost -> Insert  
+	// Create a new employee
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -63,6 +65,7 @@ public class EmployeeAPI extends HttpServlet {
 	}
     
 	// doPut -> Update
+	// Update relevant employee details
 	protected void doPut(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
@@ -89,6 +92,7 @@ public class EmployeeAPI extends HttpServlet {
 	}
     
 	// doDelete -> Delete
+	// Delete relevant employee details
 	protected void doDelete(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Map paras = getParasMap(request);
