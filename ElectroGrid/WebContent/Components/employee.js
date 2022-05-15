@@ -1,6 +1,7 @@
 $(document).ready(function()
 {
-// Hide the alerts on page load------------------
+// Hide the alerts on page load-----------------------------------------------------------
+
 if ($("#alertSuccess").text().trim() == "")
  {
  $("#alertSuccess").hide();
@@ -10,21 +11,20 @@ if ($("#alertSuccess").text().trim() == "")
 
 
 
-
-//SAVE=====================================================================================
+// SAVE ===================================================================================
 $(document).on("click", "#btnSave", function(event)
 {
 
-// Clear alerts-----------------------------
+// Clear alerts----------------------------------------------------------------------------
  $("#alertSuccess").text("");
  $("#alertSuccess").hide();
  $("#alertError").text("");
  $("#alertError").hide();
  
-// Form validation-------------------------------------------
+// Form validation-------------------------------------------------------------------------
 var status = validateUserForm();
 
-// IF not valid----------------------------------------------
+// IF not valid----------------------------------------------------------------------------
 if (status != true)
  {
  $("#alertError").text(status);
@@ -32,7 +32,8 @@ if (status != true)
  return;
  }
 
-// If valid--------------------------------------------------
+// If valid--------------------------------------------------------------------------------
+
 var type = ($("#hididSave").val() == "") ? "POST" : "PUT";
 
 
@@ -82,7 +83,8 @@ if (status == "success")
 }
 
 
-//UPDATE================================================================================
+// UPDATE ====================================================================================
+
 $(document).on("click", ".btnUpdate", function(event)
 {
  $("#hididSave").val($(this).closest("tr").find('#hididUpdate').val());
@@ -93,7 +95,9 @@ $(document).on("click", ".btnUpdate", function(event)
  $("#password").val($(this).closest("tr").find('td:eq(4)').text());
 });
 
-//DELETE================================================================================
+
+// DELETE =====================================================================================
+
 $(document).on("click", ".btnRemove", function(event)
 		{
 		 $.ajax(
@@ -111,6 +115,7 @@ $(document).on("click", ".btnRemove", function(event)
 
 
 // DC Response handler
+
 function onUserDeleteComplete(response, status)
 {
 if (status == "success")
@@ -139,8 +144,8 @@ if (status == "success")
 
 
 
-//CLIENTMODEL=========================================================================
-// Validating the form data===========================================================
+// CLIENT MODEL =====================================================================================
+// Validating the form data =========================================================================
 
 function validateUserForm()
 {
@@ -148,14 +153,14 @@ function validateUserForm()
 //first_name
 if ($("#first_name").val().trim() == "")
 {
-return "Insert employee first name.";
+    return "Insert employee first name.";
 }
 
 
 //last_name
 if ($("#last_name").val().trim() == "")
 {
-return "Insert employee last name.";
+    return "Insert employee last name.";
 }
 
 
@@ -163,33 +168,36 @@ return "Insert employee last name.";
 
 function isEmail(email) {
 	var regex =  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
-		return regex.test(email);
+	
+	return regex.test(email);
+		
 }
 
 
 if ($("#email").val().trim() == "")
 {
-return "Insert Email.";
+    return "Insert Email.";
 }
 else if(!isEmail($("#email").val())){
+	
 	return "Insert valid Email";
+	
 }
-
 
 
 // user_role
 if ($("#user_role").val().trim() == "")
 {
-return "Insert user role.";
+    return "Insert user role.";
 } 
 
 
 // password
 if ($("#password").val().trim() == "")
 {
-return "Insert password.";
+   return "Insert password.";
 }
-return true;
+   return true;
 }
 
 

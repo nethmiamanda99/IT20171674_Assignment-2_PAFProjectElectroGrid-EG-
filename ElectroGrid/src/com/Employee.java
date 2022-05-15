@@ -205,4 +205,64 @@ public class Employee {
 		}
 		return output;
 	}
+	
+	// Read list of employee details
+    // @GET
+	public String readListOfEmployees() {
+		String output = "";
+		
+		try {
+			Connection con = connect();
+			
+			if (con == null) {
+				return "Error while connecting to the database for reading.";
+			}
+			
+			
+			// Prepare the html table to be displayed
+			output = "<table class='table table-hover'><tr><th>First Name</th><th>Last Name</th><th>Email</th>"
+					+ "<th>User Role</th><th>Password</th><th>Remove</th></tr>";
+
+			String query = "select * from employee";
+			Statement stmt = con.createStatement();
+			ResultSet rs = stmt.executeQuery(query);
+			
+			
+			// iterate through the rows in the result set
+			while (rs.next()) {
+				String id = Integer.toString(rs.getInt("id"));
+				String first_name = rs.getString("first_name");
+				String last_name = rs.getString("last_name");
+				String email = rs.getString("email");
+				String user_role = rs.getString("user_role");
+				String password = rs.getString("password");
+				
+				
+				// Add into the html table
+				output += "<tr><td><input id='hididUpdate' name='hididUpdate' type='hidden' value='" + id
+						+ "'>" + first_name + "</td>";
+				output += "<td>" + last_name + "</td>";
+				output += "<td>" + email + "</td>";
+				output += "<td>" + user_role + "</td>";
+				output += "<td>" + password + "</td>";
+				
+				
+				// buttons
+				output += "<td><input name='btnRemove' type='button' value='Remove' class='btnRemove btn btn-danger' data-itemid='"
+						+ id + "'>" + "</td></tr>";
+			}
+			con.close();
+			
+			
+			// Complete the html table
+			output += "</table>";
+			
+		} 
+		catch (Exception e) {
+			
+			output = "Error while reading the Employees.";
+			System.err.println(e.getMessage());
+		}
+		return output;
+	}
 }

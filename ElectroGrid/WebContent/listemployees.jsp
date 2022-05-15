@@ -11,8 +11,6 @@
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery.min.js"></script>
 <script src="Components/employee.js"></script>
-<script src="Components/jquery.min.js"></script>
-<link rel="stylesheet" href="Views/bootstrap.min.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
@@ -29,7 +27,7 @@
 					<div id="divUserGrid">
 						<%
 						Employee empObj = new Employee();
-											out.print(empObj.readEmployees());
+											out.print(empObj.readListOfEmployees());
 						%>
 					</div>
 				</div>

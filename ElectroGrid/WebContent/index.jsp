@@ -12,7 +12,6 @@
 <link rel="stylesheet" href="Views/bootstrap.min.css">
 <script src="Components/jquery.min.js"></script>
 <script src="Components/employee.js"></script>
-<link rel="stylesheet" href="Views/bootstrap.min.css">
 </head>
 <body>
 <jsp:include page="header.jsp"></jsp:include>
