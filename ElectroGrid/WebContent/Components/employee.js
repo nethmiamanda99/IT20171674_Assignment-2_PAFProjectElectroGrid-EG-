@@ -1,4 +1,6 @@
-$(document).ready(function()
+/**
+ * 
+ */$(document).ready(function()
 {
 // Hide the alerts on page load-----------------------------------------------------------
 

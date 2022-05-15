@@ -27,7 +27,7 @@
 					<div id="divUserGrid">
 						<%
 						Employee empObj = new Employee();
-											out.print(empObj.readListOfEmployees());
+											out.print(empObj.readEmployees());
 						%>
 					</div>
 				</div>
